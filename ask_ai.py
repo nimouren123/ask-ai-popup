@@ -69,7 +69,7 @@ API_KEY  = (os.getenv("ASK_AI_API_KEY") or os.getenv("DEEPSEEK_API_KEY")
 BASE_URL = os.getenv("ASK_AI_BASE_URL") or "https://api.deepseek.com"
 MODEL    = os.getenv("ASK_AI_MODEL") or "deepseek-chat"
 
-SYSTEM_PROMPT = '用户在学一个东西，从一大段讲解里选中了一小块来问。\n你的任务：把这一小块讲透，不要重新讲整套内容。\n1. 一句话说清这段是做什么的\n2. 逐行 / 逐参数解释\n3. 指出容易踩的坑\n4. 涉及数据结构就说明 shape\n如果背景里提到过它，点到为止地引用一句即可，不要复述前文。\n用中文，简洁，直接上干货。'
+SYSTEM_PROMPT = '用户在学一个东西，从一大段讲解里选中了一小块来问。\n回答一律简略：先给结论，能一句说完就不写第二句，不铺垫、不复述、不加总结段。\n你的任务：把这一小块讲透，不要重新讲整套内容。\n1. 一句话说清这段是做什么的\n2. 逐行 / 逐参数解释\n3. 指出容易踩的坑\n4. 涉及数据结构就说明 shape\n如果背景里提到过它，点到为止地引用一句即可，不要复述前文。\n用中文，直接上干货。'
 
 CONFIG_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "ask_ai_config.json")
 
